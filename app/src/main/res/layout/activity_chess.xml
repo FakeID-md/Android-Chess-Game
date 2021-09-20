@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/SuperLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onResign"
+        android:textAllCaps="false"
+        android:text="@string/resign"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/draw"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onDraw"
+        android:textAllCaps="false"
+        android:text="@string/draw"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/ai"
+        app:layout_constraintStart_toEndOf="@id/resign" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onAI"
+        android:textAllCaps="false"
+        android:text="@string/ai"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toStartOf="@id/undo"
+        app:layout_constraintStart_toEndOf="@id/draw" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onUndo"
+        android:textAllCaps="false"
+        android:text="@string/undo"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ai" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="onNext"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onHidden"
+        android:textAllCaps="false"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

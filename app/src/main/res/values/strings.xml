@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chess</string>
+    <string name="resign">Resign</string>
+    <string name="draw">Draw</string>
+    <string name="ai">AI</string>
+    <string name="undo">Undo</string>
+    <string name="AskRecord">Provide a record name:</string>
+    <string name="Save">Save</string>
+    <string name="Cancel">Cancel</string>
+    <string name="SortByTime">Sort by time</string>
+    <string name="SortByTitle">Sort by title</string>
+    <string name="NewGame">New Game</string>
+    <string name="Menu">Menu</string>
+    <string name="next">Next</string>
+</resources>
